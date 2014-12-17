@@ -53,3 +53,39 @@
 	  }
 	</style>
   </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3 emailForm">
+          <h1>My email form</h1>
+          <?php echo $result; ?>
+          
+          <p class="lead">Please get in touch - I'll get back to you as soon as I can.</p>
+
+          <form method="post">
+            <div class="form-group">
+              <label for="name">Your Name:</label>
+              <input type="text" name="name" class="form-control" placeholder="Hugh Jazz"
+              value="<?php echo $_POST['name']; ?>" />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Your Email:</label>
+              <input type="email" name="email" class="form-control" placeholder="chunkylover53@aol.com"
+              value="<?php echo $_POST['email']; ?>" />
+            </div>
+
+            <div class="form-group">
+              <label for="comment">Your Comment:</label>
+              <textarea class="form-control" name="comment"><?php echo $_POST['comment']; ?></textarea>
+            </div>
+            
+            <input type="submit" name="submit" class="btn btn-success btn-lg" value="Submit" />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
